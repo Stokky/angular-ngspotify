@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# my pivate files
+_DO-NOT-UPLOAD-MY-SPOTIFY-KEYS.txt
+src/private/spotify-keys.ts

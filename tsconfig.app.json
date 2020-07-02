@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": ["node"] // WARNING: empty "[]" would DISABLE automatic inclusion of @types packages
   },
   "files": [
     "src/main.ts",

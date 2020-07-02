@@ -1,0 +1,27 @@
+.row {
+    background: #222;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.search-data {
+    height: 70px;
+}
+
+.artist-thumb-wrapper {
+    float: left;
+    height: 50px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.artist-thumb {
+    height: auto;
+    width: 100%;
+}
+
+.search-data h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}

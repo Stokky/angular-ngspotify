@@ -1,0 +1,33 @@
+<h1>Mmm Music?</h1>
+<p class="lead">Use the ngSpotify app to find your favorite songs and artists.</p>
+<form action="">
+    <div class="form-group">
+        <input type="text" name="searchQuery" [(ngModel)]="searchQuery" (keyup)="searchMusic()" class="form-control" placeholder="Search Music...">
+    </div>
+</form>
+
+<div *ngIf="dataArtists">
+    <div *ngFor="let artist of dataArtists">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="search-data">
+                    <div class="artist-thumb-wrapper">
+                        <img *ngIf="artist.images.length > 0" alt="" class="artist-thumb rounded-circle" src="{{artist.images[0].url}}">
+                    </div>
+                    <h4>
+                        <a routerLink="/artist/{{artist.id}}">
+                            {{artist.name}}
+                        </a>
+                    </h4>
+                    <div>
+                        <strong>Genres: </strong>
+                        <span *ngFor="let genre of artist.genres.slice(0,5); last as isLast">
+                            {{genre + (isLast ? '' : ', ')}}
+                        </span>
+                        <span *ngIf="artist.genres.length == 0">N/A</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
